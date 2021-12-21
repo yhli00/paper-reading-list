@@ -22,24 +22,25 @@ Our approach also works well at large scale, where we train an ELECTRA-Large mod
 
 Our approach trains two neural networks, a generator G and a discriminator D. Each one primarily consists of an encoder (e.g., a Transformer network) that maps a sequence on input tokens x = [x1, ..., xn] into a sequence of contextualized vector representations h(x)=[h1, ..., hn]. For a given position t, (in our case only positions where xt = \[MASK\]), the generator outputs a probability for generating a particular token xt with a softmax layer:
 
-$$p_{G}\left(x_{t} \mid \boldsymbol{x}\right)=\exp \left(e\left(x_{t}\right)^{T} h_{G}(\boldsymbol{x})_{t}\right) / \sum \exp \left(e\left(x^{\prime}\right)^{T} h_{G}(\boldsymbol{x})_{t}\right)$$
+![math1](images/ELECTRA/math1.png)
 
 where e denotes token embeddings. For a given position t, the discriminator predicts whether the token xt is “real,” i.e., that it comes from the data rather than the generator distribution, with a sigmoid output layer:
 
 $$D(\boldsymbol{x}, t)=\operatorname{sigmoid}\left(w^{T} h_{D}(\boldsymbol{x})_{t}\right)$$
 
-The generator is trained to perform masked language modeling (MLM). Given an input x = [x1, x2, ..., xn], MLM first select a random set of positions (integers between 1 and n) to mask out m = \[m1, ..., mk\](Typically k = d0.15ne, i.e., 15% of the tokens are masked out). The tokens in the selected positions are replaced with a \[MASK\] token: we denote this as $x^{masked}$ = REPLACE(x,m, \[MASK\]). The generator then learns to predict the original identities of the masked-out tokens. The discriminator is trained to distinguish tokens in the data from tokens that have been replaced by generator samples. More specifically, we create a corrupted example $x^{corrupt}$ by replacing the masked-out tokens with generator samples and train the discriminator to predict which tokens in $x^{corrupt}$ match the original input x. Formally, model inputs are constructed according to
+The generator is trained to perform masked language modeling (MLM). Given an input x = [x1, x2, ..., xn], MLM first select a random set of positions (integers between 1 and n) to mask out m = \[m1, ..., mk\](Typically k = 0.15n, i.e., 15% of the tokens are masked out). The tokens in the selected positions are replaced with a \[MASK\] token: we denote this as $x^{masked}$ = REPLACE(x,m, \[MASK\]). The generator then learns to predict the original identities of the masked-out tokens. The discriminator is trained to distinguish tokens in the data from tokens that have been replaced by generator samples. More specifically, we create a corrupted example $x^{corrupt}$ by replacing the masked-out tokens with generator samples and train the discriminator to predict which tokens in $x^{corrupt}$ match the original input x. Formally, model inputs are constructed according to
 
-$$\begin{array}{ll}m_{i} \sim \operatorname{unif}\{1, n\} \text { for } i=1 \text { to } k & \boldsymbol{x}^{\text {masked }}=\operatorname{REPLACE}(\boldsymbol{x}, \boldsymbol{m},[\text { MASK }]) \\
-\hat{x}_{i} \sim p_{G}\left(x_{i} \mid \boldsymbol{x}^{\text {masked }}\right) \text { for } i \in \boldsymbol{m} & \boldsymbol{x}^{\text {corrupt }}=\operatorname{REPLACE}(\boldsymbol{x}, \boldsymbol{m}, \hat{\boldsymbol{x}})
-\end{array}$$
+![math2](images/ELECTRA/math2.png)
 
 and the loss functions are:
-$$\mathcal{L}_{\mathrm{MLM}}\left(\boldsymbol{x}, \theta_{G}\right)=\mathbb{E}\left(\sum-\log p_{G}\left(x_{i} \mid \boldsymbol{x}^{\text {masked }}\right)\right)$$
-$$\mathcal{L}_{\text {Disc }}\left(\boldsymbol{x}, \theta_{D}\right)=\mathbb{E}\left(\sum_{t=1}^{n}-\mathbb{1}\left(x_{t}^{\text {corrupt }}=x_{t}\right) \log D\left(\boldsymbol{x}^{\text {corrupt }}, t\right)-\mathbb{1}\left(x_{t}^{\text {corrupt }} \neq x_{t}\right) \log \left(1-D\left(\boldsymbol{x}^{\text {corrupt }}, t\right)\right)\right)$$
+
+![math3](images/ELECTRA/math3.png)
+
 We minimize the combined loss
-$$\min _{\theta_{G}, \theta_{D}} \sum_{\boldsymbol{x} \in \mathcal{X}} \mathcal{L}_{\mathrm{MLM}}\left(\boldsymbol{x}, \theta_{G}\right)+\lambda \mathcal{L}_{\text {Disc }}\left(\boldsymbol{x}, \theta_{D}\right)$$
-After pre-training, we throw out the generator and fine-tune the discriminator on downstream tasks.
+
+![math4](images/ELECTRA/math4.png)
+
+over a large corpus $\mathcal{X}$ of raw text. After pre-training, we throw out the generator and fine-tune the discriminator on downstream tasks.
 
 # 3. Experiments
 ## 3.1 Experimental Setup
