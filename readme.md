@@ -5,4 +5,5 @@
 + **Bert**: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding". NAACL(2019) [[pdf]](https://arxiv.org/abs/1810.04805)
 + **RoBERTa**: "RoBERTa: A Robustly Optimized BERT Pretraining Approach". arXiv(2019) [[pdf]](https://arxiv.org/abs/1907.11692) [[note]](notes/RoBERTa.md)
 + **ALBERT**: "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations". ICLR(2020) [[pdf]](https://arxiv.org/abs/1909.11942) [[note]](notes/ALBERT.md)
++ **ELECTRA**: "ELECTRA: PRE-TRAINING TEXT ENCODERS AS DISCRIMINATORS RATHER THAN GENERATORS". ICLR(2020) [[pdf]](https://arxiv.org/abs/2003.10555) [[note]](notes/ELECTRA.md)
 # Others
