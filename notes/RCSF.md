@@ -32,7 +32,7 @@ First of all, RCSF generates a query for each slot with different strategies. Th
 ![figure2](images/RCSF/figure2.png)
 
 ## 3.1 Task Formulation
-We convert the tagging-style annotated slot filling dataset to a set of $(query, context, answer)$ triples. For each slot type $y \in S_y$ , it is associated with a natural language question (query) $q_y = \{q_{y1}, q_{y2}, ···, q_{ym}\}$ where m denotes the length of the generated question. So slot tagging can be transformed to predicting the answer spans of the specific slot $z_y = [(s_1, e_1), (s_2, e_2), ···, (s_t, e_t)]$ where s_i and e_i denotes the start and the end position of the i-th span, respectively, and $t$ is the number of spans $(1 ≤i ≤t)$.
+We convert the tagging-style annotated slot filling dataset to a set of $(query, context, answer)$ triples. For each slot type $y \in S_y$ , it is associated with a natural language question (query) $q_y = \{q_{y1}, q_{y2}, ···, q_{ym}\}$ where m denotes the length of the generated question. So slot tagging can be transformed to predicting the answer spans of the specific slot $z_y = [(s_1, e_1), (s_2, e_2), ···, (s_t, e_t)]$ where $s_i$ and $e_i$ denotes the start and the end position of the i-th span, respectively, and $t$ is the number of spans $(1 ≤i ≤t)$.
 
 ## 3.2 Query Generation
 + **Description**: We turn slot names into their corresponding slot descriptions by replacing punctuation marks like “ ” and “.” with blanks and replacing abbreviations with their original words. Queries are constructed by filling the above template using the slot descriptions directly.
