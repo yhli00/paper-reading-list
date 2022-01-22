@@ -1,7 +1,9 @@
 # Paper-Reading-list
 每周4篇，加油！
 
-**2020-1-23星期日~2020-1-29星期六：**
+**2022-1-23星期日~2022-1-29星期六：**
+
+
 # Pre-trained Language Models
 + **ELMo**: "Deep contextualized word representations". NAACL(2018) [[pdf]](https://arxiv.org/abs/1802.05365)
 + **GPT**: "Improving Language Understanding by Generative Pre-Training". [[pdf]](https://www.cs.ubc.ca/~amuham01/LING530/papers/radford2018improving.pdf)
