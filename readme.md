@@ -2,6 +2,7 @@
 每周4篇，加油！
 
 **2022-1-23星期日~2022-1-29星期六：**
++ 1. [TASE](notes/TASE.md)
 
 
 # Pre-trained Language Models
@@ -16,4 +17,8 @@
 # SLU
 + **RCSF**: "Cross-Domain Slot Filling as Machine Reading Comprehension". IJCAI(2021) [[pdf]](https://www.ijcai.org/proceedings/2021/0550.pdf) [[note]](notes/RCSF.md)
 + **QASF**: "QA-Driven Zero-shot Slot Filling with Weak Supervision Pretraining". ACL(2021) [[pdf]](https://aclanthology.org/2021.acl-short.83/) [[note]](notes/QASF.md)
+
+# MRC
++ **TASE**: "A Simple and Effective Model for Answering Multi-span Questions". EMNLP(2020) [[pdf]](https://arxiv.org/abs/1909.13375) [[note]](notes/TASE.md)
+
 # Others
