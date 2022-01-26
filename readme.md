@@ -3,6 +3,7 @@
 
 **2022-1-23星期日~2022-1-29星期六：**
 1. [TASE](https://zhuanlan.zhihu.com/p/461651200)
+2. [TemplateNER](https://zhuanlan.zhihu.com/p/462088365?)
 
 
 # Pre-trained Language Models
@@ -20,5 +21,8 @@
 
 # MRC
 + **TASE**: "A Simple and Effective Model for Answering Multi-span Questions". EMNLP(2020) [[pdf]](https://arxiv.org/abs/1909.13375) [[note]](https://zhuanlan.zhihu.com/p/461651200)
+
+# NER
++ **TemplateNER**: "Template-Based Named Entity Recognition Using BART". ACL(2021) [[pdf]](https://arxiv.org/pdf/2106.01760.pdf) [[note]](https://zhuanlan.zhihu.com/p/462088365?)
 
 # Others
