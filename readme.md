@@ -4,6 +4,7 @@
 **2022-1-23星期日~2022-1-29星期六：**
 1. [TASE](https://zhuanlan.zhihu.com/p/461651200)
 2. [TemplateNER](https://zhuanlan.zhihu.com/p/462088365?)
+3. [EntLM](https://zhuanlan.zhihu.com/p/462458103)
 
 
 # Pre-trained Language Models
@@ -24,5 +25,6 @@
 
 # NER
 + **TemplateNER**: "Template-Based Named Entity Recognition Using BART". ACL(2021) [[pdf]](https://arxiv.org/pdf/2106.01760.pdf) [[note]](https://zhuanlan.zhihu.com/p/462088365?)
++ **EntLM**: "Template-free Prompt Tuning for Few-shot NER". arXiv(2021) [[pdf]](https://arxiv.org/abs/2109.13532) [[note]](https://zhuanlan.zhihu.com/p/462458103)
 
 # Others
