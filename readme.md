@@ -27,6 +27,6 @@
 # NER
 + **TemplateNER**: "Template-Based Named Entity Recognition Using BART". ACL(2021) [[pdf]](https://arxiv.org/pdf/2106.01760.pdf) [[note]](https://zhuanlan.zhihu.com/p/462088365?)
 + **EntLM**: "Template-free Prompt Tuning for Few-shot NER". arXiv(2021) [[pdf]](https://arxiv.org/abs/2109.13532) [[note]](https://zhuanlan.zhihu.com/p/462458103)
-+ **LightNER**: "LightNER: A Lightweight Generative Framework with Prompt-guided Attention for Low-resource NER". axXiv(2021) [[pdf]](https://arxiv.org/abs/2109.00720) [[note]](https://zhuanlan.zhihu.com/p/463356701)
++ **LightNER**: "LightNER: A Lightweight Generative Framework with Prompt-guided Attention for Low-resource NER". arXiv(2021) [[pdf]](https://arxiv.org/abs/2109.00720) [[note]](https://zhuanlan.zhihu.com/p/463356701)
 
 # Others
