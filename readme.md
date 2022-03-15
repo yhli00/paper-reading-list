@@ -1,16 +1,5 @@
 # Paper-Reading-list
-每周3篇，加油！
 
-**2022-1-23星期日~2022-1-29星期六：**
-1. [TASE](https://zhuanlan.zhihu.com/p/461651200)
-2. [TemplateNER](https://zhuanlan.zhihu.com/p/462088365?)
-3. [EntLM](https://zhuanlan.zhihu.com/p/462458103)
-4. [LightNER](https://zhuanlan.zhihu.com/p/463356701)
-
-**2022-2-22星期二~2022-2-28星期一：**
-1. [LEAR](https://zhuanlan.zhihu.com/p/466735142)
-2. BERT-MRC
-3. PCLC
 
 # Pre-trained Language Models
 + **ELMo**: "Deep contextualized word representations". NAACL(2018) [[pdf]](https://arxiv.org/abs/1802.05365)
